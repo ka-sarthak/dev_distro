@@ -90,7 +90,7 @@ env = { NOMAD_SERVICES_MODE = "development" }
 
 [tool.poe.tasks.cpuworker]
 cmd = "nomad admin run action-cpu-worker"
-env = { NOMAD_SERVICES_MODE = "development" }
+env = { NOMAD_SERVICES_MODE = "development", MIMALLOC_PURGE_DELAY = "0" }
 
 [tool.poe.tasks.gpuworker]
 cmd = "nomad admin run action-gpu-worker"
